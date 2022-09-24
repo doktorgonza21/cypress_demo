@@ -23,7 +23,7 @@
 ---------------------------------------------------------------------------------------
 ##### **To see reports remotely without installation and files download**
 Go to this link to see cypress dashboard: https://dashboard.cypress.io/projects/879fh9/runs/6 <br>
-Go to this link to see Mochawesome report: https://doktorgonza21.github.io/cypress_demo_test/
+Go to this link to see Mochawesome report: https://doktorgonza21.github.io/cypress_demo/
 
 
 
