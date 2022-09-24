@@ -17,7 +17,7 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         if: always()
         with:
-          branch: main
+          branch: ghpages
           folder: cypress/reports/html/
           target-folder: docs    
              
