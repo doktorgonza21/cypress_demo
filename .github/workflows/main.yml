@@ -1,0 +1,23 @@
+name: E2E on Chrome
+on: [push]
+jobs:
+  cypress-run:
+    runs-on: ubuntu-20.04
+    name: Tests on chrome
+    steps:
+      - uses: actions/checkout@v2  
+      - uses: cypress-io/github-action@v4
+        with:
+          browser: chrome
+          record: true  
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload report
+        uses: JamesIves/github-pages-deploy-action@v4
+        if: always()
+        with:
+          branch: main
+          folder: cypress/reports/html/
+          target-folder: docs    
+             
