@@ -1,12 +1,12 @@
 {
   "scripts": {
     "start": "serve public",
-    "test": "cypress open",
-    "cy:run": "cypress run",
+    "test": "cypress open --config-file conf/cypress.config.js",
+    "cy:run": "cypress run --config-file conf/cypress.config.js",
     "dev": "start-test 5000",
-    "ci": "start-test 5000 cy:run",
-    "go": "rimraf cypress/videos/ && rimraf cypress/screenshots/ | npx cypress run --config-file ./my.config.js --browser chrome",
-    "gohead": "rimraf cypress/videos/ && rimraf cypress/screenshots/ | npx cypress run ./my.config.js --browser chrome --headed"
+    "ci": "start-test 5000 cy:run --config-file conf/cypress.config.js",
+    "go": "rimraf cypress/videos/ && rimraf cypress/screenshots/ | npx cypress run --config-file conf/my.config.js --browser chrome",
+    "gohead": "rimraf cypress/videos/ && rimraf cypress/screenshots/ | npx cypress run --config-file ./my.config.js --browser chrome --headed"
   },
   "devDependencies": {
     "allure-commandline": "^2.18.1",
